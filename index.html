@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f4">
+  <meta name="description" content="Medisync makes medicine availability easier to see, explain, and act on — from stockroom to patient refill.">
+  <meta property="og:title" content="Medisync — medicine, in sync">
+  <meta property="og:description" content="A student-built medicine supply-chain risk and refill planning demo.">
+  <meta property="og:type" content="website">
+  <title>Medisync — Medicine, in sync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Medisync home"><span class="brand-mark" aria-hidden="true"></span>medisync</a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#how">How it works</a><a href="#risk">Risk Radar</a><a href="#trace">Traceability</a><a href="#refills">Refill plans</a><a href="#sources">Sources</a>
+      </nav>
+      <div class="header-actions">
+        <button class="access-button" type="button" id="text-toggle" aria-pressed="false" aria-label="Increase text size">A&nbsp; A+</button>
+        <button class="access-button" type="button" id="contrast-toggle" aria-pressed="false">High contrast</button>
+        <a class="button button-primary button-small" href="#risk">Explore demo <span class="arrow" aria-hidden="true">↗</span></a>
+        <button class="menu-button" type="button" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+      </div>
+    </div>
+    <nav class="wrap mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="#how">How it works</a><a href="#risk">Risk Radar demo</a><a href="#suppliers">Supplier finder</a><a href="#trace">Traceability</a><a href="#refills">Refill plans</a><a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy-block">
+          <div class="eyebrow"><span class="dot" aria-hidden="true"></span> A clearer view of medicine supply</div>
+          <h1>Medicine at risk.<br><em>Action before shortage.</em></h1>
+          <p class="hero-copy">Medisync helps healthcare teams spot a supply problem early, understand why it matters, and choose the next safe action—while keeping patients and caregivers in the loop.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="#risk">Explore the live demo <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#how">See how it works</a>
+          </div>
+          <p class="hero-note"><b>Built for real-world workflows.</b> Demo records are clearly marked; no live orders or patient data.</p>
+        </div>
+        <div class="hero-visual" aria-label="Preview of the Medisync medicine operations dashboard">
+          <div class="visual-grid" aria-hidden="true"></div>
+          <div class="app-preview">
+            <div class="preview-top"><div class="preview-brand"><span class="brand-mark" aria-hidden="true"></span> Medisync</div><span class="demo-tag">Demo data</span></div>
+            <div class="preview-body">
+              <div class="preview-greeting"><div><p>OPERATIONS OVERVIEW</p><strong>Good morning</strong></div><time>Supply watch · Today</time></div>
+              <div class="preview-metrics">
+                <div class="mini-metric"><span>Medicines tracked</span><strong>06</strong></div>
+                <div class="mini-metric"><span>Need review</span><strong>03</strong></div>
+                <div class="mini-metric"><span>Batch scan steps</span><strong>03</strong></div>
+              </div>
+              <div class="preview-risk"><div class="risk-icon" aria-hidden="true">!</div><div><strong>Amoxicillin · supply risk</strong><small>Stockout in 5 days · shipment 2 days late</small></div><span class="risk-chip">HIGH</span></div>
+              <div class="preview-bottom">
+                <div class="preview-tile"><h3>Stock outlook <span>Next 14 days</span></h3><svg class="sparkline" viewBox="0 0 240 52" role="img" aria-label="Illustrative demo stock trend, declining before incoming shipment"><defs><linearGradient id="chartfill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#76b48a" stop-opacity=".3"/><stop offset="1" stop-color="#76b48a" stop-opacity="0"/></linearGradient></defs><path class="fill" d="M3 9 C33 10 38 15 64 19 S99 27 121 27 S158 33 178 36 S210 41 237 45 V52 H3Z"/><path d="M3 9 C33 10 38 15 64 19 S99 27 121 27 S158 33 178 36 S210 41 237 45"/></svg></div>
+                <div class="preview-tile"><h3>Batch journey <span>Scan events</span></h3><div class="route-dots" aria-hidden="true"><span class="route-dot"></span><span class="route-line"></span><span class="route-dot"></span><span class="route-line"></span><span class="route-dot pending"></span></div><div class="route-labels"><span>Maker</span><span>Distributor</span><span>Hospital</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-note"><span class="note-check" aria-hidden="true">✓</span><span>Recommended action<br>Compare backup suppliers</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip" aria-label="Medisync design principles">
+      <div class="wrap trust-inner">
+        <div class="trust-label">One connected view—from inventory signals to a safe next step.</div>
+        <div class="trust-item"><span class="check" aria-hidden="true">✓</span> Explainable risk</div>
+        <div class="trust-item"><span class="check" aria-hidden="true">✓</span> Traceable batches</div>
+        <div class="trust-item"><span class="check" aria-hidden="true">✓</span> Human-approved action</div>
+      </div>
+    </div>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section-head center">
+          <div class="eyebrow">From signal to response</div>
+          <h2>Less guesswork.<br>More useful next steps.</h2>
+          <p>Medisync connects stock, expiry, supplier, and shipment information so a warning comes with its evidence and a practical response.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step"><div class="step-number">01</div><h3>See the signal</h3><p>Stock and consumption trends reveal which medicines may run short.</p></article>
+          <article class="step"><div class="step-number">02</div><h3>Understand the risk</h3><p>Each risk score shows the factors behind it, not just a red label.</p></article>
+          <article class="step"><div class="step-number">03</div><h3>Compare safe options</h3><p>Check backup suppliers against quantity, distance, delivery, and reliability needs.</p></article>
+          <article class="step"><div class="step-number">04</div><h3>Follow the batch</h3><p>Review the recorded journey and identify events that need a closer look.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-section" id="risk">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Try the interactive demo</div>
+          <h2>A warning that shows its work.</h2>
+          <p>Select a medicine to inspect a transparent, data-driven risk assessment. The example data is fictional and the calculations run in this page.</p>
+        </div>
+        <div class="demo-kicker"><span>Supply Risk Radar</span><span class="demo-tag">Simulated records · Not live inventory</span></div>
+        <div class="demo-shell">
+          <aside class="demo-sidebar" aria-label="Choose a medicine">
+            <h3>Medicine watchlist</h3><p>Choose a record to see what is driving its risk.</p>
+            <div class="medicine-list" id="medicine-list"></div>
+          </aside>
+          <div class="demo-content" aria-live="polite">
+            <div class="demo-title-row">
+              <div><h3 id="selected-name">Amoxicillin</h3><p id="selected-meta">Antibiotic · Central Pharmacy · Demo data</p></div>
+              <div class="risk-score"><div class="score-number" id="risk-score">—</div><div class="score-label">Risk score</div></div>
+            </div>
+            <div class="demo-facts">
+              <div class="fact"><span>Stock on hand</span><strong id="fact-stock">—</strong></div>
+              <div class="fact"><span>Stockout estimate</span><strong class="risk-red" id="fact-days">—</strong></div>
+              <div class="fact"><span>Shipment delay</span><strong id="fact-delay">—</strong></div>
+              <div class="fact"><span>Expiry outlook</span><strong id="fact-expiry">—</strong></div>
+            </div>
+            <div class="risk-driver-head"><span>Why this score?</span><span>Weighted demo model</span></div>
+            <div class="driver-list" id="driver-list"></div>
+            <div class="recommendation"><span class="rec-icon" aria-hidden="true">→</span><div><strong>Suggested next step</strong><p id="recommendation-text"></p></div></div>
+            <div class="demo-actions">
+              <a class="button button-primary button-small" href="#suppliers">Find a backup supplier <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="button button-secondary button-small" href="#trace">View batch trace</a>
+            </div>
+            <details class="demo-explainer"><summary>How is the risk score calculated?</summary><p>Each factor is scored from 0–100, multiplied by its published weight, and combined into one score. Low is 0–29, Moderate 30–54, High 55–74, Critical 75–100. This is a transparent demo model, not a validated clinical or operational forecasting system.</p></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="supplier-demo" id="suppliers">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Decision support · not auto-ordering</div>
+          <h2>Find the supplier that fits the need.</h2>
+          <p>Change the requirements and see which demo suppliers meet them. Each match shows what passed and what did not.</p>
+        </div>
+        <div class="supplier-grid">
+          <form class="supplier-controls" id="supplier-form">
+            <h3>Set the requirements</h3><p>Results recalculate as you change the limits.</p>
+            <div class="field"><label for="req-qty">Quantity needed</label><input id="req-qty" type="number" min="1" step="100" value="1000" inputmode="numeric"><span class="unit">units</span></div>
+            <div class="field"><label for="req-days">Latest acceptable delivery</label><input id="req-days" type="number" min="1" max="30" value="2" inputmode="numeric"><span class="unit">days</span></div>
+            <div class="field"><label for="req-distance">Maximum distance</label><input id="req-distance" type="number" min="1" max="1000" value="25" inputmode="numeric"><span class="unit">km</span></div>
+            <div class="field"><label for="req-reliability">Minimum supplier reliability</label><select id="req-reliability"><option value="80">80% or more</option><option value="85" selected>85% or more</option><option value="90">90% or more</option><option value="95">95% or more</option></select></div>
+          </form>
+          <div class="supplier-results">
+            <div class="supplier-results-head"><h3>Alternative suppliers</h3><span id="supplier-count" aria-live="polite">3 demo options</span></div>
+            <div class="supplier-list" id="supplier-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trace-section" id="trace">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Batch-level traceability</div>
+          <h2>Follow one batch, step by step.</h2>
+          <p>A clear movement history helps a team review where a batch came from and whether a transfer needs investigation.</p>
+        </div>
+        <div class="trace-card">
+          <div class="trace-top"><div><h3>Amoxicillin · Batch AMX-24-0817</h3><p>Sample lot · 1,200 packs · 24-month shelf life</p></div><span class="batch-pill">TRACE · DEMO-0817</span></div>
+          <div class="timeline" aria-label="Demo batch journey from manufacturer to hospital pharmacy">
+            <article class="timeline-event"><span class="scan-mark" aria-hidden="true">✓</span><small>Recorded via scan · Demo</small><h4>Manufacturer</h4><p>Northstar Generics<br>Origin release · 1,200 packs<br>14 Aug · 09:12</p></article>
+            <article class="timeline-event"><span class="scan-mark" aria-hidden="true">✓</span><small>Recorded via scan · Demo</small><h4>Regional distributor</h4><p>Central Health Distribution<br>Received and dispatched<br>16 Aug · 14:36</p></article>
+            <article class="timeline-event current"><span class="scan-mark" aria-hidden="true">→</span><small>Recorded via scan · Demo</small><h4>Hospital pharmacy</h4><p>Riverside General<br>Receipt pending review<br>18 Aug · 08:20</p></article>
+          </div>
+          <div class="trace-note"><span aria-hidden="true">ⓘ</span><span>These are simulated scan events. A traceability exception can prompt a review, but it does not by itself prove a product is falsified.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="refill-section" id="refills">
+      <div class="wrap refill-layout">
+        <div class="refill-copy">
+          <div class="eyebrow">Refill planning · for any patient</div>
+          <h2>A refill plan that notices supply risk.</h2>
+          <p>Patients managing regular medicines can choose a preferred delivery day. A caregiver can help when the patient has given permission.</p>
+          <ul class="refill-bullets">
+            <li><span aria-hidden="true">✓</span> Estimate when a refill may be needed from demo consumption and stock signals.</li>
+            <li><span aria-hidden="true">✓</span> Explain earlier preparation or split-delivery options in plain language.</li>
+            <li><span aria-hidden="true">✓</span> Keep confirmation and required professional approval in the loop.</li>
+          </ul>
+        </div>
+        <div class="refill-panel">
+          <div class="refill-panel-top"><strong>Regular refill plan</strong><span class="demo-tag">Demo preview</span></div>
+          <div class="medicine-refill"><span class="pill-box" aria-hidden="true">＋</span><div><strong>Paracetamol · 500 mg</strong><small>Example medicine · 12 days of stock estimated</small></div></div>
+          <div class="refill-prediction"><strong>Supply watch: plan ahead</strong><p>A local supply option may arrive today; the remaining quantity may take 2 days. This is a recommendation for review, not an order.</p></div>
+          <div class="refill-settings">
+            <div class="field"><label for="refill-day">Preferred delivery day</label><select id="refill-day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+            <div class="field"><label for="caregiver-opt">Caregiver update</label><select id="caregiver-opt"><option value="off">Off</option><option value="on">On · with consent</option></select></div>
+          </div>
+          <button class="button button-primary refill-confirm" type="button" id="refill-button">Review refill plan <span class="arrow" aria-hidden="true">→</span></button>
+          <p class="refill-status" id="refill-status" role="status" aria-live="polite">No refill has been scheduled.</p>
+          <p class="guardrail">Demo only. No order is placed. Medicines, dose, and authorized quantities cannot be changed here; professional approval may be required.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="architecture" id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Designed as a connected workflow</div>
+          <h2>One record can explain the whole decision.</h2>
+          <p>Risk, supplier matching, shipment status, batch movement, and refill preparation are linked in the demo so the story is easy to follow.</p>
+        </div>
+        <div class="architecture-grid">
+          <article class="architecture-item"><span class="architecture-icon" aria-hidden="true">01</span><h3>Inventory signals</h3><p>Quantity, consumption, expiry, and location feed the medicine record.</p></article>
+          <article class="architecture-item"><span class="architecture-icon" aria-hidden="true">02</span><h3>Risk calculation</h3><p>A separate weighted function scores the factors and shows the contribution.</p></article>
+          <article class="architecture-item"><span class="architecture-icon" aria-hidden="true">03</span><h3>Decision support</h3><p>Supplier requirements are checked against availability and delivery constraints.</p></article>
+          <article class="architecture-item"><span class="architecture-icon" aria-hidden="true">04</span><h3>Traceable history</h3><p>Demo scan events connect the batch from maker to receiving facility.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="transparency" id="transparency">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Transparent by design</div>
+          <h2>Useful signals, honest limits.</h2>
+          <p>Medisync is a decision-support prototype. It makes assumptions visible and leaves high-impact actions with authorized people.</p>
+        </div>
+        <div class="transparency-grid">
+          <div class="model-card">
+            <h3>Risk model used in this demo</h3><p>Each input factor is scored 0–100; weighted contributions combine into an overall score.</p>
+            <div class="weight-row"><span>Stockout proximity</span><strong>30%</strong><div class="bar-track"><div class="bar-fill" style="--fill:30%"></div></div></div>
+            <div class="weight-row"><span>Shipment delay</span><strong>20%</strong><div class="bar-track"><div class="bar-fill" style="--fill:20%"></div></div></div>
+            <div class="weight-row"><span>Supplier reliability</span><strong>15%</strong><div class="bar-track"><div class="bar-fill" style="--fill:15%"></div></div></div>
+            <div class="weight-row"><span>Expiry exposure</span><strong>15%</strong><div class="bar-track"><div class="bar-fill" style="--fill:15%"></div></div></div>
+            <div class="weight-row"><span>Unusual inventory movement</span><strong>20%</strong><div class="bar-track"><div class="bar-fill" style="--fill:20%"></div></div></div>
+          </div>
+          <aside class="limitations">
+            <h3>What this demo does not claim</h3>
+            <ul>
+              <li>Inventory, suppliers, and scan events are fictional demo records.</li>
+              <li>No live GPS, supplier connection, barcode hardware, or orders are connected.</li>
+              <li>A movement anomaly flags a record for review; it does not prove counterfeiting.</li>
+              <li>Refill suggestions do not change prescriptions or replace professional approval.</li>
+              <li>SMS, WhatsApp, authentication, and patient data storage are not connected.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="judges" id="judges">
+      <div class="wrap">
+        <div class="section-head center">
+          <div class="eyebrow">Made to be evaluated clearly</div>
+          <h2>See the problem. Try the solution. Inspect the logic.</h2>
+          <p>Common student-hackathon rubrics reward projects that work, solve a real need, feel usable, and are explained clearly. Medisync makes those parts visible in the demo.</p>
+        </div>
+        <div class="judge-grid">
+          <article class="judge-card"><strong>Real-world relevance</strong><p>Medicine stockouts, delay, expiry, and traceability are connected to one practical workflow.</p></article>
+          <article class="judge-card"><strong>Working interactions</strong><p>Change a risk record, test supplier limits, inspect a batch path, and preview a refill plan.</p></article>
+          <article class="judge-card"><strong>Technical clarity</strong><p>The demo exposes its weighted model, inputs, assumptions, and backend-ready structure.</p></article>
+          <article class="judge-card"><strong>Accessible design</strong><p>Readable type, high contrast, keyboard access, large controls, and plain-language actions.</p></article>
+        </div>
+        <p class="judge-footnote">Every event sets its own rules and scoring weights. This site reflects common criteria, not a promise of acceptance or placement. See the linked rubrics below.</p>
+      </div>
+    </section>
+
+    <section class="sources" id="sources">
+      <div class="wrap">
+        <h2>Sources &amp; references</h2>
+        <p class="sources-intro">Background reading for the problem framing and common student-hackathon evaluation criteria.</p>
+        <div class="source-list">
+          <a class="source-link" href="https://www.who.int/publications/i/item/WHO-EMP-IAU-2017.15" target="_blank" rel="noopener noreferrer"><span>WHO · Notification systems for medicine shortages and stockouts</span><span aria-hidden="true">↗</span></a>
+          <a class="source-link" href="https://www.who.int/news-room/fact-sheets/detail/substandard-and-falsified-medical-products" target="_blank" rel="noopener noreferrer"><span>WHO · Substandard and falsified medical products</span><span aria-hidden="true">↗</span></a>
+          <a class="source-link" href="https://www.who.int/tools/quality-management-system-for-non-laboratory-settings/pillar-3--procurement-supply-chain-and-inventory-management" target="_blank" rel="noopener noreferrer"><span>WHO · Procurement, supply chain, and inventory management</span><span aria-hidden="true">↗</span></a>
+          <a class="source-link" href="https://info.devpost.com/blog/understanding-hackathon-submission-and-judging-criteria" target="_blank" rel="noopener noreferrer"><span>Devpost · Common hackathon judging criteria</span><span aria-hidden="true">↗</span></a>
+          <a class="source-link" href="https://tigerhacks.missouri.edu/rubrics_all.pdf" target="_blank" rel="noopener noreferrer"><span>University of Missouri · Student hackathon judging rubric</span><span aria-hidden="true">↗</span></a>
+          <a class="source-link" href="https://hackcc-2025.devpost.com/rules" target="_blank" rel="noopener noreferrer"><span>HackCC · Student hackathon criteria: execution, impact, design, presentation</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>medisync</a>
+      <p class="footer-note">Student project prototype · Fictional demo data · Built for learning and demonstration</p>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+
