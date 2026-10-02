@@ -8,9 +8,9 @@ Medisync is a student-built prototype for medicine inventory visibility and supp
 
 ## Explore the demo
 
-Open [`index.html`](./index.html) in a modern browser. No package installation, build step, or API key is required. The Google Fonts import is optional; system fonts remain available offline.
+**Live demo:** [anirud0811.github.io/medisync-supply-chain](https://anirud0811.github.io/medisync-supply-chain/)
 
-The site is ready for GitHub Pages deployment. After this repository is created, choose **Settings → Pages → GitHub Actions** as the publishing source. The included workflow publishes the root static site when changes are pushed to `main`.
+To run it locally, open [`index.html`](./index.html) in a modern browser. No package installation, build step, or API key is required. The Google Fonts import is optional; system fonts remain available offline. GitHub Pages automatically republishes the root static site when changes are pushed to `main`.
 
 ## What you can try
 
