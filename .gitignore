@@ -1,0 +1,17 @@
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and generated artifacts
+*.log
+dist/
+node_modules/
+
